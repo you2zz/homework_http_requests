@@ -25,10 +25,11 @@ if __name__ == '__main__':
 
 # def upload_file_to_disk(disk_file_path, filename, token):
 #         href = get_upload_link(disk_file_path=disk_file_path, token=token).get("href", "")
-#         response = requests.put(href, data=open(filename, 'rb'))
-#         response.raise_for_status()
-#         if response.status_code == 201:
-#             print("Success")
+#         with open(filename, 'rb') as data:
+#             response = requests.put(href, data)
+#             response.raise_for_status()
+#             if response.status_code == 201:
+#                 print("Success")
 
 # token = ''
 # upload_file_to_disk("test12052023.txt", "test12052023.txt", token)
